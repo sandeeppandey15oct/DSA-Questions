@@ -13,12 +13,26 @@ public class LinkedListLength {
         node2.next = node3;
         node3.next = node4;
         node4.next = null;
-        System.out.println("Is there a loop? " + LinkedListUtil.dedectLoop(head));
+        System.out.println("Is there a loop? " + LinkedListUtil.evenOrOdd(head));
 
     }
 }
 
 class LinkedListUtil {
+
+    public static String evenOrOdd(NodeList nodeList) {
+        while (true) {
+            if (nodeList == null) {
+                return "Even";
+            }
+            if (nodeList.next == null) {
+                return "Odd";
+            }
+            nodeList = nodeList.next.next;
+
+        }
+    }
+
     public static void print(NodeList node) {
         while (node != null) {
             System.out.println(node.data + " ");
