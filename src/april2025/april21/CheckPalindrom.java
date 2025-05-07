@@ -1,4 +1,4 @@
-package april2015.april21;
+package april2025.april21;
 
 public class CheckPalindrom {
     public static void main(String[] args) {
