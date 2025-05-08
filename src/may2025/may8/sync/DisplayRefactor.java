@@ -6,6 +6,11 @@ public class DisplayRefactor {
             System.out.println("Good Morning.." + name);
         }
     }
+    public  void wishMe(String name) {
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Good Morning..wishMe" + name);
+        }
+    }
 }
 
 class MyThread2 extends Thread {
@@ -20,6 +25,7 @@ class MyThread2 extends Thread {
     @Override
     public void run() {
         display.wish(name);
+       // display.wishMe(name);
     }
 }
 
