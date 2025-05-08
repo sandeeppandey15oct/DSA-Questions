@@ -1,18 +1,18 @@
 package may2025.may8.sync;
 
-public class DisplayRefactor {
-    public synchronized void wish(String name) {
+public class Display {
+    public  void wish(String name) {
         for (int i = 0; i < 10; i++) {
             System.out.println("Good Morning.." + name);
         }
     }
 }
 
-class MyThread2 extends Thread {
-    DisplayRefactor display;
+class MyThread extends Thread {
+    Display display;
     String name;
 
-    public MyThread2(DisplayRefactor display, String name) {
+    public MyThread(Display display, String name) {
         this.display = display;
         this.name = name;
     }
@@ -23,11 +23,11 @@ class MyThread2 extends Thread {
     }
 }
 
-class Demo2 {
+class Demo {
     public static void main(String[] args) {
-        DisplayRefactor display = new DisplayRefactor();
-        MyThread2 t1 = new MyThread2(display, "Dhoni");
-        MyThread2 t2 = new MyThread2(display, "Yuvraj");
+        Display display = new Display();
+        MyThread t1 = new MyThread(display, "Dhoni");
+        MyThread t2 = new MyThread(display, "Yuvraj");
         t1.start();
         t2.start();
     }
