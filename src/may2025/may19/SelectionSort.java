@@ -24,7 +24,7 @@ public class SelectionSort {
         Arrays.stream(a).forEach(System.out::println);
     }
 
-    private static void swapNumber(int[] a, int i, int j) {
+    public static void swapNumber(int[] a, int i, int j) {
         int temp = a[i];
         a[i] = a[j];
         a[j] = temp;
