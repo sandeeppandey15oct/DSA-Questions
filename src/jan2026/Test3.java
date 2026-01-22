@@ -8,6 +8,6 @@ public class Test3 {
         Predicate<Integer> p = (a)->a%2==0;
         System.out.println(p.test(112));
         List<String> list = List.of("a","c");
-        list.forEach(x-);
+        list.forEach(x-> System.out.println(x));
     }
 }
